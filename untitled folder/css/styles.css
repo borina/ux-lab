@@ -1,0 +1,27 @@
+@import url('_reset.css');
+
+.wrapper{
+	background-color: pink;
+}
+
+.header {
+	height: 100px;
+	background-color: blue;
+}
+
+.main {
+	display: block;
+	width: 80%;
+	background-color: green;
+}
+
+.sidebar {
+	display: block;
+	width: 10%
+	background-color:black;
+}
+
+.footer {
+	height: 100px;
+	background-color: red;
+}
