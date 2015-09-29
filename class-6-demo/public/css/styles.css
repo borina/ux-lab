@@ -1,0 +1,114 @@
+/* loading the reset */
+@import url('_reset.css');
+
+body {
+    font-size: 18px;
+}
+
+.wrapper {
+    height: 100%;
+    padding: 0 10%;
+    max-width: 1440px;
+    background-color: #E0E0E0;
+    margin: auto;
+}
+
+.header {
+    position: fixed;
+    height: 100px;
+    width: 80%;
+    max-width: 1440px;
+    background-color: #666;
+}
+
+.main {
+    width: 80%;
+    background-color: #999;
+    padding-top: 100px;
+    margin-left: 20%;
+}
+
+
+.sidebar {
+    width: 19%;
+    float: left;
+    background-color: #333;
+    margin-top: 100px;
+    margin-right: 1%;
+}
+
+.footer {
+    height: 100px;
+    background-color: #000;
+    margin-top: 0;
+}
+
+.header h1, .sidebar-nav, .main-content {
+    padding: 20px;
+}
+
+/* Responsive styles */
+
+/* Tablet breakpoint */
+@media screen and (max-width: 980px) {
+
+    body {
+        background-color: #E0E0E0;
+        font-size: 1.5em;
+    }
+
+    .wrapper {
+        height: auto;
+    }
+
+    .header {
+        height: 100px;
+        width: 80%;
+    }
+
+    .sidebar  {
+        float: none;
+        display: inline-block;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .main {
+        width: 100%;
+        padding-top: 0;
+        margin-left: 0;
+    }
+}
+
+/* Mobile breakpoint */
+@media screen and (max-width: 480px) {
+
+    body {
+        background-color: #E0E0E0;
+        font-size: 2em;
+    }
+
+    .wrapper {
+        width: 100%;
+        padding: 0;
+    }
+    .header {
+        position: relative;
+        height: 100px;
+        width: 100%;
+    }
+
+    .sidebar  {
+        float: none;
+        display: inline-block;
+        width: 100%;
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    .main {
+        width: 100%;
+        padding-top: 0;
+        margin-left: 0;
+    }
+}
