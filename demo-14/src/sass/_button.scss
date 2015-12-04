@@ -1,0 +1,48 @@
+// Buttons
+
+$primary-button-text-size: 16px;
+$button-background-color: $primary-color;
+$button-background-hover: $accent-color;
+
+
+@mixin primary-button {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    font-family: $font-base, $font-base-fallback;
+
+    font-size: $primary-button-text-size;
+    line-height: $primary-button-text-size + 2px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: $button-background-color;
+    color: #fff;
+
+    &:hover {
+        background-color: $button-background-hover;
+        transition: all .2s ease-in;
+    }
+
+    &:active {
+        background-color: $button-background-color;
+    }
+}
+
+
+.primary-cta {
+    @include primary-button;
+}
+
+.secondary-cta {
+    @include primary-button;
+    background-color: red;
+}
+
+.button-icon {
+    span:before {
+        content: url(http://localhost:3001/images/sleigh.svg);
+    }
+}

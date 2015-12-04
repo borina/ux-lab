@@ -1,0 +1,92 @@
+$mobile-breakpoint: 480px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
+
+body {
+    font-size: 1.1rem;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    height: auto;
+    padding: 0 80px 100px 80px;
+    background-color: pink;
+    margin: auto;
+}
+
+.header {
+    min-height: 100px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: blue;
+}
+
+.main {
+    display: block;
+    width: 80%;
+    margin-left: 20%;
+    min-height: 100px;
+    background-color: grey;
+    overflow: hidden;
+}
+
+.row {
+    overflow: hidden;
+}
+
+.sidebar {
+    float: left;
+    width: calc(20% - 30px);
+    min-height: 100px;
+    background-color: orange;
+    margin-right: 30px;
+}
+
+.footer {
+    min-height: 100px;
+    background-color: red;
+    margin-top: 30px;
+}
+
+// Medium Size Screens: Tablets
+@media screen and (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {
+    .wrapper{
+        padding: 20px;
+    }
+
+    .header {
+        margin-bottom: 0;
+    }
+
+    .main {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+}
+
+// Small Screens: Phones
+@media screen and (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint)  {
+    .wrapper{
+        padding: 0;
+    }
+
+    .header {
+        margin-bottom: 0;
+    }
+
+    .main {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+

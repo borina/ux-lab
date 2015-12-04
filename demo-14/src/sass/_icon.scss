@@ -1,0 +1,115 @@
+// Icons
+// -----------------------------------------------------------------------------
+
+@font-face {
+    font-family: 'hbc-icons';
+    src: url('../../fonts/hbc-icons/hbc-icons.eot'),
+         url('../../fonts/hbc-icons/hbc-icons.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/hbc-icons/hbc-icons.woff') format('woff'),
+         url('../../fonts/hbc-icons/hbc-icons.ttf')  format('truetype');
+}
+
+$icon-font-family: 'hbc-icons';
+
+// Path where font icon files are located relative to this file.
+$icon-font-path: '../../fonts/hbc-icons';
+
+$icon-font-map: (
+    alert:                  '\e91d',
+    backtotop:              '\e902',
+    barcode:                '\e921',
+    calendar:               '\e900',
+    chat-o:                 '\e909',
+    check-circle:           '\e91e',
+    caret-down-circle:      '\e91f',
+    caret-down:             '\e94e',
+    caret-right:            '\e94f',
+    caret-up:               '\e952',
+    credit-card:            '\e922',
+    check:                  '\e923',
+    chevron-down:           '\e924',
+    chevron-left:           '\e925',
+    chevron-right:          '\e926',
+    chevron-up:             '\e927',
+    clock:                  '\e928',
+    cross-thin:             '\e929',
+    cross-thick:            '\e943',
+    compress:               '\e937',
+    customer:               '\e910',
+    facebook:               '\e92d',
+    fit-predictor:          '\e92e',
+    foursquare:             '\e92f',
+    gift:                   '\e930',
+    google-plus:            '\e931',
+    navigation:              '\e932',
+    heart:                  '\e948',
+    info:                   '\e91b',
+    instagram:              '\e934',
+    lock:                   '\e935',
+    lead:                   '\e91c',
+    location:               '\e915',
+    off5th:                 '\e90b',
+    saks:                   '\e946',
+    saks-style:             '\e947',
+    minus-thin:             '\e938',
+    minus-thick:            '\e903',
+    mobile:                 '\e939',
+    mute:                   '\e92c',
+    mail:                   '\e901',
+    pause-circle:           '\e93c',
+    pinterest:              '\e93d',
+    plus-thin:              '\e93e',
+    plus-thick:             '\e912',
+    pov:                    '\e93f',
+    print:                  '\e940',
+    play-circle:            '\e953',
+    pencil:                 '\e92b',
+    question-mark:          '\e941',
+    reload:                 '\e942',
+    resize:                 '\e944',
+    rss-square:             '\e945',
+    remove-circle:          '\e92a',
+    shopping-bag:           '\e920',
+    search-o:               '\e949',
+    search-plus-o:          '\e958',
+    search-minus-o:         '\e959',
+    share:                  '\e94a',
+    sms:                    '\e94b',
+    star:                   '\e94c',
+    stop-circle:            '\e94d',
+    tumblr:                 '\e950',
+    twitter:                '\e951',
+    vine:                   '\e954',
+    volume:                 '\e955',
+    wanelo:                 '\e956',
+    youtube:                '\e957',
+);
+
+
+
+.hbc-icon {
+    display: inline-block;
+    font-family: $icon-font-family;
+    font-size: inherit;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: inherit;
+    text-decoration: none;
+    text-transform: none;
+    speak: none;
+    vertical-align: bottom;
+    font-size-adjust: none;
+    font-stretch: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+// Loop through the list of available icons and build class selectors for each
+// one of them.
+@each $name, $icon in $icon-font-map {
+    .hbc-icon--#{$name}:before {
+        content: $icon;
+    }
+}
